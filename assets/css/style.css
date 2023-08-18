@@ -1,65 +1,256 @@
-* {
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
+
+@keyframes scroll {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -100%;
+    }
+  }
+
+:root  {
+    --background-color: #eaeef6;
+	--off-white: #f1eeff;
+	--purple: #6558d3;
+    --muted: #a0a0a0;
+    --black: #141b22;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
 }
 
 body {
-    height: 100%;
-    width: 100%;
+    font-family: "Spline Sans", sans-serif;
+    background-color: var(--background-color);
+	line-height: 1.5;
+	min-height: 100vh;
     margin: 0;
+    color: var(--black);
 }
 
-.top-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: darkgray;
-    padding: 5px;
-    height: 25px;
+a, a:visited { 
+    text-decoration: none; 
+    color: var(--black); 
 }
 
-.top-bar span {
-    text-align: center;
-    font-size: 12px;
-    color: black;
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, #eaeef6, #eceef4, #edeef2, #eeeef0, #eeeeee);
+}
+
+.hero {
+    display: grid;
+    grid-template-rows: 10vh 90vh;
 }
 
 .navigation {
-    background-color: gray;
-    height: 60px;
-    margin-bottom: 25px;
-}
-
-.carousel {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.nav-logo {
+    width: 250px;
+    height: 75px;
+}
+
+.nav-links li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 40px;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
     justify-content: center;
     align-items: center;
+    padding: 00px 100px;
 }
 
-.carousel-images {
-    padding: 30px;
-    background-color: lightcoral;
-    height: 350px;
-    width: 90%;
-    border-radius: 20px;
-    margin-bottom: 25px;
+.slogan-box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.design-to-deliver {
+.slogan-title {
+    font-size: 24px;
+    font-weight: 700;
+    word-spacing: 2px;
+}
+
+.slogan-desc {
+    opacity: 0.6;
+}
+
+.info-buttons {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+}
+
+.learn-button {
+    align-self: flex-start;
+    border: 2px solid var(--purple);
+    padding: 10px 18px;
+    font-size: 16px;
+    color: var(--purple);
+}
+
+.contact-button {
+    align-self: flex-start;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    background-color: var(--purple);
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.image-collage {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    height: 90%;
+    grid-gap: 10px;
+    padding: 10%;
+}
+
+.page-content {
+    background-color: var(--background-color);
+}
+
+.partners {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 25px;
+    padding-top: 50px;
+    background-color: #E9E5E1;
+}
+
+.partner-images img {
+    width: 200px;
+    height: 100px;
+    mix-blend-mode: color-burn;
+}
+
+.partner-images li {
+    display: inline;
+    margin-right: 30px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.section-desc {
+    opacity: .6;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    background-color: #EAEEF6;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 100px;
+    gap: 30px;
 }
 
 .card {
-    padding: 30px;
-    background-color: rgb(75, 141, 116);
-    border-radius: 20px;
-    width: 100%;
-    height: 250px;
+    background-color: #FFFFFF
+    box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+    height: 300px;
+    border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+.grid-item1 {
+    background-image: url("https://images.unsplash.com/photo-1534719156993-f3c9448673bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f089cfa06eb1cd7c0f654b39d8fdfd07&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  
+  .grid-item2 {
+    background-image: url("https://images.unsplash.com/photo-1534759846116-5799c33ce22a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19c8355cd5aff72debf2f4720f4c7e09&auto=format&fit=crop&w=688&q=80");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/2;
+    grid-row: 2/5;
+  }
+  
+  .grid-item3 {
+    background-image: url("https://images.unsplash.com/photo-1508097549463-97f74cb9a6aa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=52c257bf60c788a1332419c74c6a8a01&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/5;
+    grid-row: 5/5;
+  }
+  
+  .grid-item4 {
+    background-image: url("https://images.unsplash.com/photo-1507562534834-42ebd36b00ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f712012a42c9e9d9163fd9a0c80fd66a&auto=format&fit=crop&w=1202&q=80");
+    background-size: cover;
+    background-position: center;
+    grid-column: 2/4;
+    grid-row: 2/5;
+  }
+  
+  .grid-item5 {
+    background-image: url("https://images.unsplash.com/photo-1534714259038-764cb4cf1d58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d07ea713fcf12221034dafd8f4ffe82b&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: center;
+    grid-column: 4/6;
+    grid-row: 1/3;
+  }
+  
+  .grid-item6 {
+    background-image: url("https://images.unsplash.com/photo-1515694581961-1fbdb6840a5f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4267be6fb944c94b672e0b3ddb458286&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+    background-position: center;
+    grid-column: 4/5;
+    grid-row: 3/5;
+  }
+  
+  .grid-item7 {
+    background-image: url("https://images.unsplash.com/photo-1534703580202-6123d4189ef6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5478b30dec2346f00a40ab259d162068&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+    background-position: center;
+    grid-column: 5/6;
+    grid-row: 3/6;
+  }
+  
+  .grid-item8 {
+    background-image: url("https://images.unsplash.com/photo-1534743901536-d184ed4194bc?ixlib=rb-0.3.5&s=21fd4555141d93425b8ee3f80f764e69&auto=format&fit=crop&w=634&q=80");
+    background-size: cover;
+    background-position: center;
+    grid-column: 6/8;
+    grid-row: 1/6;
+  }
